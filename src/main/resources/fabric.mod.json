@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "custompng",
+  "version": "${version}",
+  "name": "Custom PNG",
+  "description": "A Meteor Client addon that adds a customizable PNG in the Click GUI.",
+  "authors": [
+    "nasm"
+  ],
+  "contact": {
+    "repo": "https://github.com/netwideassembler/custom-png-meteor"
+  },
+  "icon": "assets/custompng/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "dev.nasm.custompng.CustomPNG"
+    ]
+  },
+  "mixins": [
+    "custompng.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "19,59,107"
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}"],
+    "meteor-client": "*"
+  }
+}
