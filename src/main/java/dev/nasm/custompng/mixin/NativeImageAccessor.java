@@ -1,4 +1,3 @@
-// NativeImageAccessor.java
 package dev.nasm.custompng.mixin;
 
 import net.minecraft.client.texture.NativeImage;
@@ -9,7 +8,4 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 public interface NativeImageAccessor {
     @Invoker("setColor")
     void invokeSetColor(int x, int y, int color);
-
-    @Invoker("getFormat")
-    NativeImage.Format invokeGetFormat();
 }
