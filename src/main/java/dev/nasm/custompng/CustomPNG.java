@@ -1,30 +1,23 @@
 package dev.nasm.custompng;
 
 import com.mojang.logging.LogUtils;
-import dev.nasm.custompng.modules.CustomPNGModule;
-import meteordevelopment.meteorclient.MeteorClient;
+import dev.nasm.custompng.hud.ElementCustomPNG;
 import meteordevelopment.meteorclient.addons.GithubRepo;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
-import meteordevelopment.meteorclient.systems.modules.Category;
-import meteordevelopment.meteorclient.systems.modules.Modules;
+import meteordevelopment.meteorclient.systems.hud.Hud;
+import meteordevelopment.meteorclient.systems.hud.HudGroup;
 import org.slf4j.Logger;
 
 public class CustomPNG extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Custom PNG");
+    public static final HudGroup HUD_GROUP = new HudGroup("Custom PNG");
 
     @Override
     public void onInitialize() {
         LOG.info("Initializing Custom PNG");
 
         // Modules
-        Modules.get().add(new CustomPNGModule());
-
-    }
-
-    @Override
-    public void onRegisterCategories() {
-        Modules.registerCategory(CATEGORY);
+        Hud.get().register(ElementCustomPNG.INFO);
     }
 
     @Override

@@ -5,7 +5,7 @@
   "name": "Custom PNG",
   "description": "A Meteor Client addon that adds a customizable PNG in the Click GUI.",
   "authors": [
-    "nasm"
+    "aze"
   ],
   "contact": {
     "repo": "https://github.com/netwideassembler/custom-png-meteor"
